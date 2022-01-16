@@ -7,7 +7,7 @@ let draw_once = false
 
 let chance = 2
 let chance_min = 2
-let chance_max = 16
+let chance_max = 4
 
 let weight = 5
 let weight_min = 2
