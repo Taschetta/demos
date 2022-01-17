@@ -23,6 +23,7 @@ let action = 'close'
 function setup() {
   createCanvas(windowWidth, windowHeight);
   strokeCap(ROUND)
+  strokeJoin(ROUND)
 }
 
 function draw() {
@@ -55,11 +56,19 @@ function draw() {
         action = actions[int(random(0, chance))]
   
         if(action === 'close' || action === 'continue') {
+          const color = int(random(0,2))
+          if(color === 0) {
+            fill(0)
+          } else {
+            fill(255)
+          }
+          
           strokeWeight(weight)
           line(x_center, y_center, x_center, y_center)
           vertex(x_center, y_center)
+          
         } else {
-          endShape(CLOSE)
+          // endShape(CLOSE)
         }
         
       }
