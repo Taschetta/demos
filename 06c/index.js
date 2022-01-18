@@ -77,7 +77,8 @@ let circle_radius_max = 50
 let fill_value
 
 function setup() {
-  createCanvas(windowWidth - 100, 500);
+  const canvas = createCanvas(windowWidth - 100, 500);
+  canvas.parent('canvas-section')
   background(255)
 }
 
