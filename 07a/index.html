@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>WEB AUDIO API</h1>
+  <div class="container">
+    <div class="controls">
+      <div class="oscillator-frequency">
+        <input id="frequency" type="number" min="110" max="880" value="220">
+      </div>
+      <div class="oscillator-type">
+        <label><input class="type" type="radio" name="type" value="sine" checked>
+          Sine
+        </label>
+        <label><input class="type" type="radio" name="type" value="square">
+          Square
+        </label>
+        <label><input class="type" type="radio" name="type" value="sawtooth">
+          Sawtooth
+        </label>
+        <label><input class="type" type="radio" name="type" value="triangle">
+          Triangle
+        </label>
+      </div>
+      <div class="gain">
+        <input id="gain-value" type="range" min="0" max="1" step="0.01" value="0">
+      </div>
+    </div>
+  </div>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
