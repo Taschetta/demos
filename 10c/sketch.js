@@ -17,18 +17,21 @@ function setup() {
   circle_position_y = height / 2
   
   background(0)
-  stroke(255)
+  stroke(255, 50)
+  angleMode(DEGREES)
   noFill()
 }
 
-function draw() {
-  background(0,25)
+let rotation = 0
 
-  const velocity_x = map(mouseX, 0, width, 0, 50)
-  const velocity_y = map(mouseY, 0, height, 0, 50)
+function draw() {
+  const velocity_x = 25
+  const velocity_y = 25
 
   amount_x = amount_x + velocity_x * direction_x
   amount_y = amount_y + velocity_y * direction_y
+
+  rotate(rotation)
   
   if(amount_x > width / 2 - circle_radius) {
     direction_x = -1
